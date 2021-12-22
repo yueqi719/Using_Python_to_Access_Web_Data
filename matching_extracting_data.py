@@ -22,6 +22,7 @@ part = re.findall('@([^ ]*)',ln)
 print(part) #['ucsd.edu']
 part2 = re.findall('^From .*@([^ ]*)',ln)
 print(part2) #['ucsd.edu']
+print(re.findall('\S+?@\S+',ln)) #quiz question
 
 #Spam Confidence
 hand  = open('mbox-short.txt')
