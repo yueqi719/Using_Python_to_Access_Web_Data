@@ -1,14 +1,18 @@
 import re
 
 hand  = open('regex_sum.txt')
-sum = 0
+total = 0
 
 for line in hand:
     line = line.rstrip()
     nums = re.findall('[0-9]+',line)
-    #print(nums)
+    print(nums)
     if len(nums) == 0: continue
     for num in nums:
-        sum = sum + int(num)
+       sum = sum + int(num)
 
 print(sum)
+
+#shorter code 
+import re
+print(sum([int(i) for i in re.findall('[0-9]+',open("regex_sum.txt").read())]))
