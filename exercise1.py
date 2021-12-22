@@ -9,9 +9,9 @@ for line in hand:
     print(nums)
     if len(nums) == 0: continue
     for num in nums:
-       sum = sum + int(num)
+       total = total + int(num)
 
-print(sum)
+print(total)
 
 #shorter code 
 import re
