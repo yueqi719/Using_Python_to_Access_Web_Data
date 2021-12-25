@@ -6,7 +6,7 @@ cmd = 'GET http://data.pr4e.org/romeo.txt HTTP/1.0\r\n\r\n'.encode()
 mysock.send(cmd)
 
 while True:
-    data = mysock.recv(512)
+    data = mysock.recv(512) #receive up to 512 characters and get it back
     if (len(data)<1): #if no data
         break
     print(data.decode())
